@@ -37,8 +37,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Load and cache dependencies
-        uses: ./.github/actions/cached_deps
+      - name: Install Deps
+        run: npm ci
       - name: Build website
         run: npm run build
       - name: Upload artifacts
@@ -60,7 +60,7 @@ jobs:
           path: ./dist
       
       - name: Output contents
-        run: ls
+        run: ls 
       - name: Deploy site
         id: deploy
         uses: ./.github/actions/deployment
