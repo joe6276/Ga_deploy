@@ -70,3 +70,6 @@ jobs:
         with:
           bucketName: qacohortdeploy
           distFiles: ./dist
+
+      - name: utput link
+        run: echo "${{steps.deploy.outputs.URL}}"
