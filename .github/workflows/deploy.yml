@@ -64,6 +64,9 @@ jobs:
         with:
           bucketName: ${{secrets.BUCKETNAME}}
           distFiles: ./dist
-
+  printURL:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy site
-        run: echo "Deploying..."
+        run: echo "${{needs.deploy.outputs.URL}}"
