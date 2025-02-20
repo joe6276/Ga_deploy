@@ -13,7 +13,8 @@ function run(){
     const s3Url= `s3://${bucket}`
     exec.exec(` aws s3 sync ${distFiles} ${s3Url} --region ${bucketRegion}`)
     
-
+   const websiteURL = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`
+   core.setOutput("URL", websiteURL) //>> echo "URl=fvvv" >> $GITHUB_OUTPUT
 }
 
 run()
