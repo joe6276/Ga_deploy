@@ -57,7 +57,8 @@ jobs:
       #     path: ./dist
       # - name: Output Contents
       #   run: ls
-
+      - name:  Load deps
+        uses: ./.github/actions/cached_deps
       - name: Deploy Site
         id: deploy
         uses: ./.github/actions/deploy-s3
