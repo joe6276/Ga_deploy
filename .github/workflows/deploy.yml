@@ -61,7 +61,7 @@ jobs:
         uses: ./.github/actions/cached_deps
       - name: Deploy Site
         id: deploy
-        uses: ./.github/actions/deploy-s3
+        uses: ./.github/actions/deployment
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
