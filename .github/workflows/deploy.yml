@@ -50,13 +50,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with: 
-          name: dist-files
-          path: ./dist
-      - name: Output Contents
-        run: ls
+      # - name: Download artifacts
+      #   uses: actions/download-artifact@v4
+      #   with: 
+      #     name: dist-files
+      #     path: ./dist
+      # - name: Output Contents
+      #   run: ls
 
       - name: Deploy Site
         id: deploy
