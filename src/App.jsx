@@ -10,7 +10,7 @@ function App() {
         </div>
         <h1>Learn & Master GitHub Actions</h1>
       </header>
-      <MainContent />
+     
     </>
   );
 }
